@@ -1,0 +1,126 @@
+.contact-container {
+    max-width: 520px;
+    width: 90%;
+    padding: 40px;
+    margin: 40px auto;
+    height: auto;
+}
+
+body {
+    align-items: flex-start;
+    padding: 20px 0;
+}
+
+.back-link {
+    display: inline-block;
+    color: var(--btn-bg);
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 16px;
+    transition: opacity 0.2s;
+}
+
+.back-link:hover {
+    opacity: 0.7;
+}
+
+h1 {
+    margin-bottom: 8px;
+}
+
+.contact-desc {
+    color: var(--text-color);
+    opacity: 0.7;
+    font-size: 14px;
+    margin-bottom: 28px;
+    font-family: sans-serif;
+    transition: color 0.3s ease;
+}
+
+.form-group {
+    text-align: left;
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    color: var(--text-color);
+    margin-bottom: 6px;
+    transition: color 0.3s ease;
+}
+
+.required {
+    color: #e94560;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1.5px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: 'Jua', sans-serif;
+    background-color: var(--container-bg);
+    color: var(--text-color);
+    transition: border-color 0.2s, background-color 0.3s, color 0.3s;
+    box-sizing: border-box;
+}
+
+body.dark .form-group input,
+body.dark .form-group select,
+body.dark .form-group textarea {
+    border-color: #444;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--btn-bg);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+#submit-btn {
+    width: 100%;
+    padding: 14px;
+    font-size: 17px;
+    margin-top: 8px;
+    font-family: 'Jua', sans-serif;
+    background-color: var(--btn-bg);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#submit-btn:hover {
+    background-color: var(--btn-hover);
+}
+
+#submit-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.success-msg {
+    margin-top: 24px;
+    padding: 16px;
+    background-color: #d4edda;
+    color: #155724;
+    border-radius: 10px;
+    font-size: 15px;
+    font-family: sans-serif;
+}
+
+body.dark .success-msg {
+    background-color: #1e3a2a;
+    color: #a3d9b1;
+}

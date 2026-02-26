@@ -132,6 +132,19 @@ h1 {
     transition: color 0.3s ease;
 }
 
+.contact-link {
+    display: inline-block;
+    margin-top: 16px;
+    color: var(--btn-bg);
+    text-decoration: none;
+    font-size: 15px;
+    transition: opacity 0.2s;
+}
+
+.contact-link:hover {
+    opacity: 0.7;
+}
+
 @media (max-width: 600px) {
     .container {
         padding: 20px;
