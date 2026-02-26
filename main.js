@@ -1,6 +1,25 @@
 
 const lottoNumbersContainer = document.querySelector('.lotto-numbers');
 const generateBtn = document.getElementById('generate-btn');
+const themeCheckbox = document.getElementById('theme-checkbox');
+
+// 저장된 테마 적용
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'dark') {
+    document.body.classList.add('dark');
+    themeCheckbox.checked = true;
+}
+
+// 다크모드 토글
+themeCheckbox.addEventListener('change', () => {
+    if (themeCheckbox.checked) {
+        document.body.classList.add('dark');
+        localStorage.setItem('theme', 'dark');
+    } else {
+        document.body.classList.remove('dark');
+        localStorage.setItem('theme', 'light');
+    }
+});
 
 function generateLottoNumbers() {
     const numbers = new Set();
@@ -16,7 +35,6 @@ generateBtn.addEventListener('click', () => {
     const numberDivs = lottoNumbersContainer.querySelectorAll('.number');
     numberDivs.forEach((div, index) => {
         div.textContent = numbers[index];
-        // Optional: Add some animation or color change
         div.style.backgroundColor = getRandomColor();
     });
 });
