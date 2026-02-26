@@ -23,13 +23,18 @@ body.dark {
 
 body {
     font-family: 'Jua', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
     margin: 0;
     background-color: var(--bg-color);
     transition: background-color 0.3s ease;
+}
+
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 20px 60px;
+    min-height: 100vh;
+    box-sizing: border-box;
 }
 
 .container {
@@ -130,6 +135,33 @@ h1 {
     user-select: none;
     color: var(--text-color);
     transition: color 0.3s ease;
+}
+
+/* Disqus 댓글 영역 */
+.disqus-wrapper {
+    width: 100%;
+    max-width: 700px;
+    margin-top: 40px;
+    background-color: var(--container-bg);
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    padding: 36px 40px;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.disqus-title {
+    color: var(--text-color);
+    font-size: 20px;
+    margin: 0 0 24px 0;
+    padding-bottom: 12px;
+    border-bottom: 1.5px solid rgba(128, 128, 128, 0.2);
+    transition: color 0.3s ease;
+}
+
+/* Disqus 다크모드 색상 반전 */
+body.dark #disqus_thread {
+    color-scheme: dark;
 }
 
 .contact-link {
